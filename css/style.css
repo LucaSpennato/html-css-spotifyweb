@@ -47,3 +47,42 @@ body{
     --scnd-txt-col: gray;
     --fweight-fix: bold;
 }
+
+.upgrade-bar{
+    width: calc(100% - 12rem);
+    height: 5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+/* sidebar */
+/* utilizzare un'altezza in px fissa,
+non gli permette di andare sotto il player in basso
+bisogna impostare una max width ed una min width
+in alternativa al vh per ottenere lo stesso risultato di vh
+ma al raggiungimento della min width, sposta giuù il player */
+.side-navbar{
+    width: 12rem;
+    height: calc(100vh - 6rem);
+    background-color: red;
+}
+
+/* player bar */
+
+.player-bar{
+    height: 6rem;
+    width: 100%;
+    background-color: green;
+}
+
+/* display */
+
+.display{
+    background-color: aqua;
+    padding: 1.25rem;
+    width: calc(100% - 12rem);
+    height: calc(100vh - 6rem);
+    overflow: auto;
+}
