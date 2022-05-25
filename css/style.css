@@ -44,6 +44,7 @@ a{
     --prime-txt-col: white;
     --scnd-txt-col: gray;
     --fweight-fix: bold;
+    --fsize-sectiontitle-fix: 2rem;
 }
 
 /* upgrade top bar */
@@ -78,7 +79,7 @@ ma al raggiungimento della min width, sposta giuù il player */
 /* main-content */
 /* content sorter */
 .up-content-sorter{
-    margin: 10rem 0 6rem 0 ;
+    margin: 8rem 0 6rem 0 ;
 }
 
 .up-content-sorter ul{
@@ -91,7 +92,22 @@ ma al raggiungimento della min width, sposta giuù il player */
     padding: .3rem .5rem;
 }
 
-/* common main-content containers */
+/* common main-content containers & rules*/
+.section-info{
+    margin: 2rem 0;
+}
+
+.section-name{
+    color: var(--prime-txt-col);
+    font-weight: var(--fweight-fix);
+    font-size: var(--fsize-sectiontitle-fix);
+    margin-bottom: 0.5rem;
+}
+
+.section-suggestion{
+    color: var(--scnd-txt-col);
+}
+
 .main-content{
     padding: 1.25rem;
     width: calc(100% - 4rem);
@@ -127,6 +143,7 @@ ma al raggiungimento della min width, sposta giuù il player */
     margin-top: .3125rem;
     font-size: .7rem;
 }
+
 
 
 /* recently-played */
