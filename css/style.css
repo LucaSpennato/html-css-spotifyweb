@@ -9,6 +9,10 @@ body{
 }
 
 /* common rules */
+section{
+    margin-top: 8rem;
+}
+
 img{
     width: 100%;
 }
@@ -79,7 +83,7 @@ ma al raggiungimento della min width, sposta giuù il player */
 /* main-content */
 /* content sorter */
 .up-content-sorter{
-    margin: 8rem 0 6rem 0 ;
+    margin: 8rem 0 4rem 0 ;
 }
 
 .up-content-sorter ul{
@@ -133,7 +137,7 @@ ma al raggiungimento della min width, sposta giuù il player */
     responsive*/
 
 .song-name{
-    margin-top: .3125rem;
+    margin-top: .65rem;
     font-size: .9rem;
     color: var(--prime-txt-col);
     font-weight: var(--fweight-fix);
@@ -144,10 +148,10 @@ ma al raggiungimento della min width, sposta giuù il player */
     font-size: .7rem;
 }
 
-
-
-/* recently-played */
-
+/* section 3 popular artists */
+.popular-artists img{
+    border-radius: 50%;
+}
 
 /*************************************
     mediaquery
