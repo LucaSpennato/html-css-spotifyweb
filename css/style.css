@@ -54,11 +54,21 @@ a{
 /* upgrade top bar */
 .upgrade-bar{
     width: calc(100% - 4rem);
-    height: 8rem;
+    /* height: 8rem; */
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     right: 0;
     top: 0;
+    justify-content: end;
+}
+
+.upgrade-btn{
+    color: var(--prime-txt-col);
+    padding: .5rem 3rem;
+    border: 2px solid white;
+    border-radius: 1rem;
+    display: inline-block;
+    margin: 2rem;
 }
 
 /* sidebar */
