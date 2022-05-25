@@ -29,31 +29,12 @@ img{
     flex-direction: column;
 }
 
-
-/* common containers */
-.song-box{
-    max-width: calc(100% / 6);
-    min-width: 10rem;
-    font-size: 1rem;
-    padding: 0 0.8rem;
-    margin: .3rem 0;
-    text-align: center;
-    background-color: red;
+a{
+    text-decoration: none;
+    color: var(--scnd-txt-col);
 }
 
-.song-name{
-    margin-top: .3125rem;
-    font-size: .rem;
-    color: var(--prime-txt-col);
-    font-weight: var(--fweight-fix);
-}
-
-.author-name{
-    margin-top: .3125rem;
-    font-size: .7rem;
-}
 /* custom prop */
-
 :root{
     /* backgorunds */
     --prime-main-bg-col: #141922;
@@ -65,16 +46,15 @@ img{
     --fweight-fix: bold;
 }
 
-/* .upgrade-bar{
-    width: calc(100% - 12rem);
-    height: 5rem;
+/* upgrade top bar */
+.upgrade-bar{
+    width: calc(100% - 4rem);
+    height: 8rem;
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     right: 0;
     top: 0;
-} */
-
-/* main content */
+}
 
 /* sidebar */
 /* utilizzare un'altezza in px fissa,
@@ -82,31 +62,107 @@ non gli permette di andare sotto il player in basso
 bisogna impostare una max width ed una min width
 in alternativa al vh per ottenere lo stesso risultato di vh
 ma al raggiungimento della min width, sposta giuù il player */
-
 .side-navbar{
-    width: 12rem;
+    width: 4rem;
     height: calc(100vh - 5rem);
     background-color: var(--prime-side-bg-col);
 }
 
 /* player bar */
-
 .player-bar{
     height: 5rem;
     width: 100%;
     background-color: var(--prime-playerbar-bg-col);
 }
 
-/* display */
+/* main-content */
+/* content sorter */
+.up-content-sorter{
+    margin: 10rem 0 6rem 0 ;
+}
 
+.up-content-sorter ul{
+    list-style: none;
+    text-align: center;
+}
+
+.up-content-sorter ul li{
+    display: inline-block;
+    padding: .3rem .5rem;
+}
+
+/* common main-content containers */
 .main-content{
     padding: 1.25rem;
-    width: calc(100% - 12rem);
+    width: calc(100% - 4rem);
     height: calc(100vh - 5rem);
     overflow: auto;
     background-color: var(--prime-main-bg-col);
     color: var(--prime-txt-col);
 }
 
+.song-box{
+    width: 50%;
+    font-size: 1rem;
+    padding: 0 .5rem;
+    margin: .3rem 0;
+    text-align: center;
+}
+    /* usando: 
+    width: calc(100% / 6);
+    e min-width: 10rem sin dal desktop
+    si ottiene già responsive
+    inolte, usando min-width e basta 
+    i box saranno sempre anche se solo per un pò,
+    responsive*/
+
+.song-name{
+    margin-top: .3125rem;
+    font-size: .9rem;
+    color: var(--prime-txt-col);
+    font-weight: var(--fweight-fix);
+}
+
+.author-name{
+    margin-top: .3125rem;
+    font-size: .7rem;
+}
+
+
 /* recently-played */
+
+
+/*************************************
+    mediaquery
+**************************************/
+@media all and (min-width: 601px){
+    /* size adj */
+    .side-navbar{
+        width: 12rem;
+    }
+
+    .upgrade-bar{
+        width: calc(100% - 12rem);
+    }
+    
+    .main-content{
+        width: calc(100% - 12rem);
+    }
+}
+
+@media all and (min-width: 701px){
+    /* size adj */
+    .song-box{
+        width: calc(100% / 4);
+    }
+}
+
+@media all and (min-width: 1100px){
+    /* size adj */
+    .song-box{
+        width: calc(100% / 6); 
+    }
+}
+
+
 
