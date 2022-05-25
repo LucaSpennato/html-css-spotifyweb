@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* common rules */
+.f{
+    display: flex;
+}
+
+.f-wr{
+    flex-wrap: wrap;
+}
+
+.f-r-sb{
+    justify-content: space-between;
+}
+
+.f-c{
+    flex-direction: column;
+}
+
+
+/* common containers */
+.songs-container{
+
+}
+
+.song-box{
+
+}
+
+/* custom prop */
+
+:root{
+    /* backgorunds */
+    --prime-main-bg-col: #141922;
+    --prime-side-bg-col: #000000;
+    --prime-playerbar-bg-col: #282828;
+    /* text */
+    --prime-txt-col: white;
+    --scnd-txt-col: gray;
+    --fweight-fix: bold;
+}
