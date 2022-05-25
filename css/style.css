@@ -9,6 +9,10 @@ body{
 }
 
 /* common rules */
+img{
+    width: 100%;
+}
+
 .f{
     display: flex;
 }
@@ -27,14 +31,27 @@ body{
 
 
 /* common containers */
-.songs-container{
-
-}
-
 .song-box{
-
+    max-width: calc(100% / 6);
+    min-width: 10rem;
+    font-size: 1rem;
+    padding: 0 0.8rem;
+    margin: .3rem 0;
+    text-align: center;
+    background-color: red;
 }
 
+.song-name{
+    margin-top: .3125rem;
+    font-size: .rem;
+    color: var(--prime-txt-col);
+    font-weight: var(--fweight-fix);
+}
+
+.author-name{
+    margin-top: .3125rem;
+    font-size: .7rem;
+}
 /* custom prop */
 
 :root{
@@ -90,3 +107,6 @@ ma al raggiungimento della min width, sposta giuù il player */
     background-color: var(--prime-main-bg-col);
     color: var(--prime-txt-col);
 }
+
+/* recently-played */
+
