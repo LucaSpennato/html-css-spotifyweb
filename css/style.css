@@ -10,7 +10,7 @@ body{
 
 /* common rules */
 section{
-    margin-top: 8rem;
+    margin-top: 4rem;
 }
 
 img{
@@ -29,8 +29,16 @@ img{
     justify-content: space-between;
 }
 
+.f-jc{
+    justify-content: center;
+}
+
 .f-c{
     flex-direction: column;
+}
+
+.f-c-asb{
+    align-content: space-between;
 }
 
 a{
@@ -42,7 +50,7 @@ a{
 :root{
     /* backgorunds */
     --prime-main-bg-col: #141922;
-    --prime-side-bg-col: #000000;
+    --prime-side-bg-col: #06070A;
     --prime-playerbar-bg-col: #282828;
     /* text */
     --prime-txt-col: white;
@@ -53,8 +61,7 @@ a{
 
 /* upgrade top bar */
 .upgrade-bar{
-    width: calc(100% - 4rem);
-    /* height: 8rem; */
+    width: calc(100% - 3rem);
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     right: 0;
@@ -62,13 +69,25 @@ a{
     justify-content: end;
 }
 
+/******************************************
+    main 
+ ******************************************/
+ .wrapper{
+    overflow: hidden;
+    height: calc(100vh - 5rem);
+}
+/* overflow: hidden 
+impedisce che gli elementi vadano 
+sopra la barra del player  */
+
 .upgrade-btn{
     color: var(--prime-txt-col);
-    padding: .5rem 3rem;
+    font-size: 0.8rem;
+    padding: .5rem 2rem;
     border: 2px solid white;
     border-radius: 1rem;
     display: inline-block;
-    margin: 2rem;
+    margin: 1.5rem;
 }
 
 /* sidebar */
@@ -76,24 +95,41 @@ a{
 non gli permette di andare sotto il player in basso
 bisogna impostare una max width ed una min width
 in alternativa al vh per ottenere lo stesso risultato di vh
-ma al raggiungimento della min width, sposta giuù il player */
+ma al raggiungimento della min width, sposta giù il player
+si risolve però con overflow:hidden */
 .side-navbar{
-    width: 4rem;
-    height: calc(100vh - 5rem);
+    width: 3rem;
+    padding: 0.2rem;
+    align-items: center;
     background-color: var(--prime-side-bg-col);
 }
 
-/* player bar */
-.player-bar{
-    height: 5rem;
-    width: 100%;
-    background-color: var(--prime-playerbar-bg-col);
+.side-navbar .up-content a,
+.side-navbar .down-content a{
+    display: inline-block;
+    padding: .3125rem;
+    margin-top: .2rem;
 }
 
-/* main-content */
+.side-navbar .up-content a img,
+.side-navbar .down-content a img{
+    width: 1.3rem;
+}
+
+.playlist{
+    display: hidden;
+}
+
+.down-content .user img{
+    background-color: gray;
+    height: 1.3rem;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
 /* content sorter */
 .up-content-sorter{
-    margin: 8rem 0 4rem 0 ;
+    margin: 7rem 0 3rem 0;
 }
 
 .up-content-sorter ul{
@@ -124,13 +160,13 @@ ma al raggiungimento della min width, sposta giuù il player */
 
 .main-content{
     padding: 1.25rem;
-    width: calc(100% - 4rem);
-    height: calc(100vh - 5rem);
+    width: calc(100% - 3rem);
     overflow: auto;
     background-color: var(--prime-main-bg-col);
     color: var(--prime-txt-col);
 }
 
+/* signle songs box */
 .song-box{
     width: 50%;
     font-size: 1rem;
@@ -156,11 +192,19 @@ ma al raggiungimento della min width, sposta giuù il player */
 .author-name{
     margin-top: .3125rem;
     font-size: .7rem;
+    color: var(--scnd-txt-col);
 }
 
 /* section 3 popular artists */
 .popular-artists img{
     border-radius: 50%;
+}
+
+/* player bar */
+.player-bar{
+    height: 5rem;
+    width: 100%;
+    background-color: var(--prime-playerbar-bg-col);
 }
 
 /*************************************
