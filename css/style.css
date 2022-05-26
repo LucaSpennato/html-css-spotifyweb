@@ -111,10 +111,21 @@ si risolve però con overflow:hidden */
     margin-top: .2rem;
 }
 
-.side-navbar .up-content a img,
+.side-navbar .up-content .logo a:nth-child(2){
+    display: none;
+}
+
+.side-navbar .up-content a img:not([src*="logo.svg"]),
 .side-navbar .down-content a img{
     width: 1.3rem;
+    
 }
+
+.side-navbar .download img,
+.side-navbar nav img{
+    filter: contrast(0);
+}
+
 
 .playlist{
     display: hidden;
@@ -123,7 +134,6 @@ si risolve però con overflow:hidden */
 .down-content .user img{
     background-color: gray;
     height: 1.3rem;
-    object-fit: contain;
     border-radius: 50%;
 }
 
