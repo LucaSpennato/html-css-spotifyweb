@@ -275,11 +275,13 @@ si risolve però con overflow:hidden */
     height: 5rem;
     padding: .625rem;
     width: 100%;
+    overflow: hidden;
     background-color: var(--prime-playerbar-bg-col);
 }
 
 .song-info img{
     height: 4rem;
+    width: 4rem;
     padding: .5rem;
 }
 
@@ -299,7 +301,7 @@ si risolve però con overflow:hidden */
 }
 
 .song-settings{
-    gap: 2rem;
+    gap: 1rem;
     justify-content: center;
 }
 
@@ -307,12 +309,20 @@ si risolve però con overflow:hidden */
     cursor: pointer;
 }
 
+.player-control{
+    flex-grow: 1;
+}
+
+.progression-control{
+    width: 50%;
+    margin: 0 auto;
+}
+
 .player-control span{
     font-size: .625rem;
 }
 
 #progbar{
-    display: inline-block;
     position: relative;
     margin: .5rem 1rem;
 }
@@ -327,9 +337,8 @@ si risolve però con overflow:hidden */
 #base-prog-bar{
     height: 3px;
     display: inline-block;
-    width: 25rem;
+    width: 100%;
     background-color: gray;
-    
 }
 
 #progress{
@@ -345,11 +354,15 @@ si risolve però con overflow:hidden */
 .display-settings{
     color: var(--scnd-txt-col);
     align-items: center;
+    max-width: 18.75rem;
+    min-width: 9.375rem;
+    justify-content: center;
 }
 
-.display-settings i{
+.display-settings .icon-settings{
     cursor: pointer;
-    padding: 0 .625rem;
+    justify-content: space-between;
+    flex-grow: 1;
 }
 
 #volbar{
