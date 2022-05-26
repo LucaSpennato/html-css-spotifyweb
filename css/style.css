@@ -175,6 +175,23 @@ si risolve però con overflow:hidden */
     border-radius: 50%;
 }
 
+.down-content .download{
+    font-size: .7rem;
+}
+
+.down-content hr{
+    border: none;
+    width: 10rem;
+    margin-bottom: .3125rem;
+    height: 1px;
+    background-color: gray;
+}
+
+.down-content .user span{
+    color: white;
+    font-weight: 700;
+}
+
 /* content sorter */
 .up-content-sorter{
     margin: 7rem 0 3rem 0;
