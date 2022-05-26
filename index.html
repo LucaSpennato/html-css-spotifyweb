@@ -267,12 +267,12 @@
     <div class="player-bar f f-r-sb">
 
         <div class="song-info f f-r-sb">
-            <div class="song">
+            <div class="album">
                 <a href="#"><img src="./img/sinister.jpeg" alt="sinister"></a>
             </div>
             <div class="song-info">
-                <div>Sinister</div>
-                <div>Nome brano</div>
+                <a href="#"><div class="song-name">Sinister</div></a>
+                <div class="author-name">Nome brano</div>
             </div>
             <div class="song-interactions f f-wr">
                 <i class="fa-regular fa-heart"></i>
@@ -280,19 +280,33 @@
             </div>
         </div>
 
-        <div class="player-control">
-            <div class="song-settings"></div>
+        <div class="player-control f-c">
+            <div class="song-settings f">
+                <i class="fa-solid fa-shuffle"></i>
+                <i class="fa-solid fa-backward-step"></i>
+                <i class="fa-solid fa-circle-play"></i>
+                <i class="fa-solid fa-forward-step"></i>
+                <i class="fa-solid fa-rotate-right"></i>
+            </div>
             <div>
-                <span>0.25</span>
+                <span>0:25</span>
                 <div id="progbar">
                     <hr id="base-prog-bar">
                     <hr id="progress">
                 </div>
-                <span>4.35</span>
+                <span>4:35</span>
             </div>
         </div>
 
-        <div class="display-settings"></div>
+        <div class="display-settings f">
+            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-tv"></i>
+            <i class="fa-solid fa-volume-high"></i>
+            <div id="volbar">
+                <hr id="base-vol-bar">
+                <hr id="vol-lvl">
+            </div>
+        </div>
     </div>
 
 </body>

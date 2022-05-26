@@ -283,24 +283,48 @@ si risolve però con overflow:hidden */
     padding: .5rem;
 }
 
-.song-info{
+.song-interactions{
+    margin: 0 1rem;
+    color: var(--scnd-txt-col);
     align-items: center;
+}
+
+.song-interactions i{
+    padding: 0.5rem;
+}
+
+
+.player-control{
+    color: white;
+}
+
+.song-settings{
+    gap: 2rem;
+    justify-content: center;
+}
+
+.song-settings i{
+    cursor: pointer;
+}
+
+.player-control span{
+    font-size: .625rem;
 }
 
 #progbar{
     display: inline-block;
     position: relative;
-    margin: 1rem 3rem;
+    margin: .5rem 1rem;
 }
 
 #base-prog-bar, #progress{
     display: inline-block;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 #base-prog-bar{
-    border: none;
     height: 3px;
     display: inline-block;
     width: 25rem;
@@ -316,6 +340,84 @@ si risolve però con overflow:hidden */
     position: absolute;
     top: 12.2px;
     left: 0;
+}
+
+.display-settings{
+    color: var(--scnd-txt-col);
+    align-items: center;
+}
+
+.display-settings i{
+    cursor: pointer;
+    padding: 0 .625rem;
+}
+
+#volbar{
+    display: inline-block;
+    position: relative;
+    margin: 0 1rem;
+}
+
+#base-vol-bar, #vol-lvl{
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#base-vol-bar{
+    height: 3px;
+    display: inline-block;
+    width: 3rem;
+    background-color: gray;
+    
+}
+
+#vol-lvl{
+    display: inline-block;
+    background-color: lightgray;
+    height: 3px;
+    width: 20%;
+    position: absolute;
+    top: 12.2px;
+    left: 0;
+}
+
+
+/********************************  
+    hover effects
+**********************************/
+
+#progbar:hover:after{
+    content: '\f111';
+    color:chartreuse;
+    position: absolute;
+    z-index: 1;
+    font-size: 10px;
+    top: 46%;
+    left: 20%;
+    font-family: 'FontAwesome';
+    cursor: pointer;
+}
+
+#progbar:hover #progress{
+    background-color: chartreuse;
+}
+
+#volbar:hover:after{
+    content: '\f111';
+    color: blue;
+    position: absolute;
+    z-index: 1;
+    font-size: 10px;
+    top: 46%;
+    left: 15%;
+    font-family: 'FontAwesome';
+    cursor: pointer;
+}
+
+#volbar:hover #vol-lvl{
+    background-color: blue;
 }
 
 
