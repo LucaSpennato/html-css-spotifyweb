@@ -114,14 +114,9 @@ si risolve però con overflow:hidden */
 }
 
 .side-navbar span{
-    display: none;
     vertical-align: top;
     padding: 0.125rem;
     margin-left: 0.3rem;
-}
-
-.side-navbar .up-content .logo a:nth-child(2){
-    display: none;
 }
 
 .side-navbar .up-content a img:not([src*="logo.svg"]),
@@ -190,6 +185,14 @@ si risolve però con overflow:hidden */
 .down-content .user span{
     color: white;
     font-weight: 700;
+}
+/* sidebar display none */
+.side-navbar .up-content .logo a:nth-child(2),
+.side-navbar span,
+.side-navbar .playlist-container,
+.side-navbar hr,
+.down-content span{
+    display: none;
 }
 
 /* content sorter */
@@ -287,7 +290,11 @@ si risolve però con overflow:hidden */
         display: none;
     }
 
-    .side-navbar span{
+    .side-navbar .up-content .logo a:nth-child(2),
+    .side-navbar span,
+    .side-navbar .playlist-container,
+    .side-navbar hr,
+    .down-content span{
         display: inline-block;
     }
 
