@@ -105,6 +105,7 @@ si risolve però con overflow:hidden */
 }
 
 .side-navbar .up-content a,
+.side-navbar nav a,
 .side-navbar .down-content a{
     display: inline-block;
     padding: .3125rem;
@@ -133,9 +134,39 @@ si risolve però con overflow:hidden */
     filter: contrast(0);
 }
 
+.playlist-container{
+    display: inline-block;
+    margin-top: 1.2rem;
+    min-height: 35%;
+    width: 100%;
+    color: white;
+    flex-grow: 1;
+    overflow: hidden;
+}
 
-.playlist{
-    display: hidden;
+.playlist-container div:first-child{
+    font-weight: 800;
+}
+
+.add-playlist{
+    margin: 0.3rem 0;
+    line-height: 200%;
+}
+
+.playlist-container .add-playlist a{
+    padding-left: 0;
+}
+
+.add-playlist i{
+    font-weight: 900;
+    font-size: 1.5rem;
+    background-color: gray;
+    color: black;
+    padding: .4rem;
+}
+
+.playlist ul li{
+    margin: 1rem 0;
 }
 
 .down-content .user img{
