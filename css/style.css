@@ -109,6 +109,14 @@ si risolve però con overflow:hidden */
     display: inline-block;
     padding: .3125rem;
     margin-top: .2rem;
+    width: fit-content;
+}
+
+.side-navbar span{
+    display: none;
+    vertical-align: top;
+    padding: 0.125rem;
+    margin-left: 0.3rem;
 }
 
 .side-navbar .up-content .logo a:nth-child(2){
@@ -118,7 +126,6 @@ si risolve però con overflow:hidden */
 .side-navbar .up-content a img:not([src*="logo.svg"]),
 .side-navbar .down-content a img{
     width: 1.3rem;
-    
 }
 
 .side-navbar .download img,
@@ -224,6 +231,22 @@ si risolve però con overflow:hidden */
     /* size adj */
     .side-navbar{
         width: 12rem;
+        align-items: flex-start;
+        padding: 1rem 1rem 0;
+    }
+
+    .side-navbar .logo a:first-child{
+        display: none;
+    }
+
+    .side-navbar span{
+        display: inline-block;
+    }
+
+    .side-navbar .up-content .logo a:nth-child(2){
+        display: inline-block;
+        margin-bottom: .8rem;
+        width: 8rem;
     }
 
     .upgrade-bar{
