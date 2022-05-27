@@ -75,6 +75,7 @@ main
     right: 0;
     top: 0;
     justify-content: end;
+    z-index: 1;
 }
 
 .upgrade-btn{
