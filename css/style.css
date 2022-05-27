@@ -135,7 +135,7 @@ si risolve però con overflow:hidden */
 
 .playlist-container{
     margin-top: 1.2rem;
-    min-height: 35%;
+    min-height: 40%;
     width: 100%;
     color: white;
     flex-grow: 1;
@@ -162,6 +162,20 @@ si risolve però con overflow:hidden */
     color: black;
     padding: .4rem;
 }
+
+.playlist ul{
+    height: calc(100vh / 3 - 5rem);
+    overflow: auto;
+}
+
+.playlist ul::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+.playlist ul::-webkit-scrollbar-thumb {
+    background: blue; 
+    border-radius: 1rem;
+  }
 
 .playlist ul li{
     margin: 1rem 0;
