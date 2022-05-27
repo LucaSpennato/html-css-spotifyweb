@@ -493,6 +493,36 @@ si risolve però con overflow:hidden */
     position: relative;
 }
 
+/* song-box */
+.song-box:hover .album-img::after{
+    content: '\f04b';
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -51%);
+    color: white;
+    font-size: 3rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* line-height: 12rem; */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* line height lo sposta al centro, o anche flex
+    -51% perchè pare non si centri per bene, non dipende 
+    da line height o da flex, sono 4px in più
+    appartenenti al box*/
+}
+
+.popular-artists .song-box:hover .album-img::after{
+    border-radius: 50%;
+}
+
+.album-img{
+    position: relative;
+}
 
 /* downbar */
 /* player-album */
