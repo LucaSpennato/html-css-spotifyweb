@@ -270,61 +270,82 @@ si risolve però con overflow:hidden */
     border-radius: 50%;
 }
 
-/* player bar */
+/* downbar */
 .player-bar{
     height: 5rem;
     padding: .625rem;
     width: 100%;
-    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--prime-playerbar-bg-col);
 }
 
-.song-info img{
-    height: 4rem;
-    width: 4rem;
-    padding: .5rem;
+.player-album, .player-control, .sound-manage{
+    height: 100%;
 }
-
-.song-interactions{
-    margin: 0 1rem;
-    color: var(--scnd-txt-col);
-    align-items: center;
-}
-
-.song-interactions i{
-    padding: 0.5rem;
-}
-
 
 .player-control{
-    color: white;
+    width: 45%;
+}
+
+.player-album, .sound-manage{
+    width: 25%;
+}
+
+.player-album{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.player-bar .album img{
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.title{
+    margin-left: .3125rem;
+}
+
+.title a:first-child{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--prime-txt-col);
+    display: block;
+}
+
+.title a:nth-child(2){
+    font-size: .8rem;
+}
+
+.interaction i{
+    cursor: pointer;
+    color: var(--scnd-txt-col);
+    margin: 0 .3rem;
 }
 
 .song-settings{
-    gap: 1rem;
-    justify-content: center;
+    text-align: center;
+    color: var(--prime-txt-col);
 }
 
 .song-settings i{
     cursor: pointer;
-}
-
-.player-control{
-    flex-grow: 1;
-}
-
-.progression-control{
-    width: 50%;
-    margin: 0 auto;
-}
-
-.player-control span{
-    font-size: .625rem;
+    margin: 0 0.8rem;
 }
 
 #progbar{
     position: relative;
     margin: .5rem 1rem;
+    flex-grow: 1;
+    width: 80%;
 }
 
 #base-prog-bar, #progress{
@@ -351,27 +372,24 @@ si risolve però con overflow:hidden */
     left: 0;
 }
 
-.display-settings{
-    color: var(--scnd-txt-col);
+.time-set{
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    max-width: 18.75rem;
-    min-width: 9.375rem;
-    justify-content: center;
 }
 
-.display-settings .icon-settings{
-    cursor: pointer;
-    justify-content: space-between;
-    flex-grow: 1;
+.time-set .t-left, .time-set .t-right{
+    color: white;
+    font-size: .625rem;
 }
 
 #volbar{
-    display: inline-block;
+    width: 50%;
     position: relative;
-    margin: 0 1rem;
+    margin: .5rem 1rem;
 }
 
-#base-vol-bar, #vol-lvl{
+#base-vol-bar, #vol-reg{
     display: inline-block;
     border: none;
     border-radius: 5px;
@@ -381,12 +399,11 @@ si risolve però con overflow:hidden */
 #base-vol-bar{
     height: 3px;
     display: inline-block;
-    width: 3rem;
+    width: 100%;
     background-color: gray;
-    
 }
 
-#vol-lvl{
+#vol-reg{
     display: inline-block;
     background-color: lightgray;
     height: 3px;
@@ -394,6 +411,25 @@ si risolve però con overflow:hidden */
     position: absolute;
     top: 12.2px;
     left: 0;
+}
+
+.sound-manage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sound-manage .icon-settings{
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+.sound-manage i{
+    color: var(--prime-txt-col);
+    cursor: pointer;
+    padding: .1rem;
+    font-size: .625rem;
 }
 
 
@@ -429,7 +465,7 @@ si risolve però con overflow:hidden */
     cursor: pointer;
 }
 
-#volbar:hover #vol-lvl{
+#volbar:hover #vol-reg{
     background-color: blue;
 }
 
@@ -449,7 +485,16 @@ si risolve però con overflow:hidden */
         display: none;
     }
 
-    /* display inline-block */
+    
+    .upgrade-bar{
+        width: calc(100% - 12rem);
+    }
+    
+    .main-content{
+        width: calc(100% - 12rem);
+    }
+
+    /* display inline-block sidebar*/
     .side-navbar .up-content .logo a:nth-child(2),
     .side-navbar span,
     .side-navbar .playlist-container,
@@ -458,19 +503,26 @@ si risolve però con overflow:hidden */
         display: inline-block;
     }
 
+    /* playerbar */
     .side-navbar .up-content .logo a:nth-child(2){
         display: inline-block;
         margin-bottom: .8rem;
         width: 8rem;
     }
-
-    .upgrade-bar{
-        width: calc(100% - 12rem);
-    }
     
-    .main-content{
-        width: calc(100% - 12rem);
+    .player-album, .sound-manage{
+        width: 20%;
     }
+
+    .player-bar .album img{
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+
+    .sound-manage i{
+        font-size: .8rem;
+    }
+
 }
 
 @media all and (min-width: 701px){
@@ -486,6 +538,4 @@ si risolve però con overflow:hidden */
         width: calc(100% / 6); 
     }
 }
-
-
 
