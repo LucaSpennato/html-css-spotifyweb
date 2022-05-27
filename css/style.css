@@ -501,6 +501,14 @@ si risolve però con overflow:hidden */
     color: white;
 }
 
+.player-album .interaction i[class*="fa-heart"]:hover{
+    color: red;
+}
+
+.player-album .interaction i[class*="fa-folder"]:hover{
+    color: yellow;
+}
+
 /* player-control */
 #progbar:hover:after{
     content: '\f111';
@@ -541,6 +549,18 @@ si risolve però con overflow:hidden */
 .player-control i[class*="fa-circle-play"]:hover{
     transform: scale(150%);
     color: chartreuse;
+}
+/* sound manage */
+.sound-manage i[class*="fa-list"]:hover{
+    color: goldenrod;
+}
+
+.sound-manage i[class*="fa-tv"]:hover{
+    color:aqua;
+}
+
+.sound-manage i[class*="fa-volume-high"]:hover{
+    color:blue;
 }
 
 /*************************************
