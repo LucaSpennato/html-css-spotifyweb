@@ -458,9 +458,23 @@ si risolve però con overflow:hidden */
 }
 
 /********************************  
-    hover effects
+    hover and effects
 **********************************/
 /* main content */
+.upgrade-btn:hover{
+    transform: scale(120%);
+}
+
+/* content sorter */
+.effect1::after{
+    content: '\0020';
+    position: absolute;
+    width: 30%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50% , +50%);
+    border-bottom: 5px solid greenyellow;
+}
 .up-content-sorter li:hover a{
     color: white;
 }
@@ -481,6 +495,13 @@ si risolve però con overflow:hidden */
 
 
 /* downbar */
+/* player-album */
+.player-album .title a:nth-child(2):hover{
+    text-decoration: underline;
+    color: white;
+}
+
+/* player-control */
 #progbar:hover:after{
     content: '\f111';
     color:chartreuse;
@@ -511,6 +532,15 @@ si risolve però con overflow:hidden */
 
 #volbar:hover #vol-reg{
     background-color: blue;
+}
+
+.player-control i:hover{
+    transform: scale(120%);
+}
+
+.player-control i[class*="fa-circle-play"]:hover{
+    transform: scale(150%);
+    color: chartreuse;
 }
 
 /*************************************
