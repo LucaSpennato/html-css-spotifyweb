@@ -463,9 +463,22 @@ si risolve però con overflow:hidden */
 /* main content */
 .up-content-sorter li:hover a{
     color: white;
-    border-bottom: 2px solid green;
-    
 }
+
+.up-content-sorter li:hover a::after{
+    content: '\0020';
+    position: absolute;
+    width: 30%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50% , +50%);
+    border-bottom: 5px solid greenyellow;
+}
+
+.up-content-sorter ul li{
+    position: relative;
+}
+
 
 /* downbar */
 #progbar:hover:after{
