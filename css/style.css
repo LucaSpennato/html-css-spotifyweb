@@ -525,6 +525,52 @@ si risolve però con overflow:hidden */
     position: relative;
 }
 
+/* sidebar */
+/* .side-navbar a, */
+.side-navbar a:hover img{
+    filter: contrast(1);
+}
+
+.side-navbar a:hover{
+    color: white;
+}
+
+.side-navbar .add-playlist a:hover i{
+    background-color: white;
+}
+
+.side-navbar nav a:hover::before{
+    color: red;
+    content: '\0020';
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    transform: translate( -1.25rem, -10%);
+    border-left: 4px solid greenyellow;
+}
+
+.selected{
+    color: white;
+}
+
+.side-navbar .selected img{
+    filter: contrast(1);
+}
+
+.selected::before{
+    color: red;
+    content: '\0020';
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    transform: translate( -1.25rem, -10%);
+    border-left: 4px solid greenyellow;
+}
+
+.side-navbar .up-content nav a{
+    position: relative;
+}
+
 /* downbar */
 /* player-album */
 .player-album .title a:nth-child(2):hover{
