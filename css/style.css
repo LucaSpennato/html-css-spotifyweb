@@ -218,7 +218,7 @@ si risolve però con overflow:hidden */
 
 .playlist-container{
     margin-top: 1.2rem;
-    min-height: 40%;
+    min-height: 10rem;
     width: 100%;
     color: white;
     flex-grow: 1;
@@ -460,6 +460,14 @@ si risolve però con overflow:hidden */
 /********************************  
     hover effects
 **********************************/
+/* main content */
+.up-content-sorter li:hover a{
+    color: white;
+    border-bottom: 2px solid green;
+    
+}
+
+/* downbar */
 #progbar:hover:after{
     content: '\f111';
     color:chartreuse;
