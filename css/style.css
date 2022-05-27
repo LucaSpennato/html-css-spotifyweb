@@ -4,11 +4,12 @@
     box-sizing: border-box;
 }
 
+
+/* common rules */
 body{
     font-family: 'Montserrat', sans-serif;
 }
 
-/* common rules */
 section{
     margin-top: 4rem;
 }
@@ -63,6 +64,9 @@ ul{
     --fsize-sectiontitle-fix: 2rem;
 }
 
+/******************************************
+main 
+******************************************/
 /* upgrade top bar */
 .upgrade-bar{
     width: calc(100% - 3rem);
@@ -73,17 +77,6 @@ ul{
     justify-content: end;
 }
 
-/******************************************
-    main 
- ******************************************/
- .wrapper{
-    overflow: hidden;
-    height: calc(100vh - 5rem);
-}
-/* overflow: hidden 
-impedisce che gli elementi vadano 
-sopra la barra del player  */
-
 .upgrade-btn{
     color: var(--prime-txt-col);
     font-size: 0.8rem;
@@ -92,6 +85,96 @@ sopra la barra del player  */
     border-radius: 1rem;
     display: inline-block;
     margin: 1.5rem;
+}
+
+ .wrapper{
+    overflow: hidden;
+    height: calc(100vh - 5rem);
+}
+/* overflow: hidden 
+impedisce che gli elementi vadano 
+sopra la barra del player  */
+
+/* main content */
+/* content sorter */
+.up-content-sorter{
+    margin: 7rem 0 3rem 0;
+}
+
+.up-content-sorter ul{
+    text-align: center;
+}
+
+.up-content-sorter ul li{
+    display: inline-block;
+    padding: .3rem .5rem;
+}
+
+/* common main-content containers & rules*/
+.section-info{
+    margin: 2rem 0;
+}
+
+.section-name{
+    color: var(--prime-txt-col);
+    font-weight: var(--fweight-fix);
+    font-size: var(--fsize-sectiontitle-fix);
+    margin-bottom: 0.5rem;
+}
+
+.section-suggestion{
+    color: var(--scnd-txt-col);
+}
+
+.main-content{
+    padding: 1.25rem;
+    width: calc(100% - 3rem);
+    overflow: auto;
+    background-color: var(--prime-main-bg-col);
+    color: var(--prime-txt-col);
+}
+
+.main-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background: green; 
+    border-radius: 1rem;
+}
+
+/* signle songs box */
+.song-box{
+    width: 50%;
+    font-size: 1rem;
+    padding: 0 .5rem;
+    margin: .3rem 0;
+    text-align: center;
+}
+    /* usando: 
+    width: calc(100% / 6);
+    e min-width: 10rem sin dal desktop
+    si ottiene già responsive
+    inolte, usando min-width e basta 
+    i box saranno sempre anche se solo per un pò,
+    responsive*/
+
+.song-name{
+    margin-top: .65rem;
+    font-size: .9rem;
+    color: var(--prime-txt-col);
+    font-weight: var(--fweight-fix);
+}
+
+.author-name{
+    margin-top: .3125rem;
+    font-size: .7rem;
+    color: var(--scnd-txt-col);
+}
+
+/* section 3 popular artists */
+.popular-artists img{
+    border-radius: 50%;
 }
 
 /* sidebar */
@@ -173,7 +256,7 @@ si risolve però con overflow:hidden */
   }
   
 .playlist ul::-webkit-scrollbar-thumb {
-    background: blue; 
+    background: green; 
     border-radius: 1rem;
   }
 
@@ -210,78 +293,6 @@ si risolve però con overflow:hidden */
 .side-navbar hr,
 .down-content span{
     display: none;
-}
-
-/* content sorter */
-.up-content-sorter{
-    margin: 7rem 0 3rem 0;
-}
-
-.up-content-sorter ul{
-    text-align: center;
-}
-
-.up-content-sorter ul li{
-    display: inline-block;
-    padding: .3rem .5rem;
-}
-
-/* common main-content containers & rules*/
-.section-info{
-    margin: 2rem 0;
-}
-
-.section-name{
-    color: var(--prime-txt-col);
-    font-weight: var(--fweight-fix);
-    font-size: var(--fsize-sectiontitle-fix);
-    margin-bottom: 0.5rem;
-}
-
-.section-suggestion{
-    color: var(--scnd-txt-col);
-}
-
-.main-content{
-    padding: 1.25rem;
-    width: calc(100% - 3rem);
-    overflow: auto;
-    background-color: var(--prime-main-bg-col);
-    color: var(--prime-txt-col);
-}
-
-/* signle songs box */
-.song-box{
-    width: 50%;
-    font-size: 1rem;
-    padding: 0 .5rem;
-    margin: .3rem 0;
-    text-align: center;
-}
-    /* usando: 
-    width: calc(100% / 6);
-    e min-width: 10rem sin dal desktop
-    si ottiene già responsive
-    inolte, usando min-width e basta 
-    i box saranno sempre anche se solo per un pò,
-    responsive*/
-
-.song-name{
-    margin-top: .65rem;
-    font-size: .9rem;
-    color: var(--prime-txt-col);
-    font-weight: var(--fweight-fix);
-}
-
-.author-name{
-    margin-top: .3125rem;
-    font-size: .7rem;
-    color: var(--scnd-txt-col);
-}
-
-/* section 3 popular artists */
-.popular-artists img{
-    border-radius: 50%;
 }
 
 /* downbar */
@@ -446,11 +457,9 @@ si risolve però con overflow:hidden */
     font-size: .625rem;
 }
 
-
 /********************************  
     hover effects
 **********************************/
-
 #progbar:hover:after{
     content: '\f111';
     color:chartreuse;
@@ -482,7 +491,6 @@ si risolve però con overflow:hidden */
 #volbar:hover #vol-reg{
     background-color: blue;
 }
-
 
 /*************************************
     mediaquery
@@ -552,4 +560,3 @@ si risolve però con overflow:hidden */
         width: calc(100% / 6); 
     }
 }
-
